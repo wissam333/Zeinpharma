@@ -2,7 +2,21 @@
     <div class="container">
         <h4>{{ $t("latestNews.header") }}</h4>
         <div class="row">
-            <div class="news col-lg-4 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+            <div class="news col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+                <div class="news-image" :class="locale == 'ar' ? 'ar-flow' : ''"> <img src="../assets//news2.webp" alt="">
+                </div>
+                <div class="news-text" :class="locale == 'ar' ? 'ar ar-flow' : ''">
+                    <h5>{{ $t("latestNews.newsTitle") }}</h5>
+                    <p>{{ $t("latestNews.newsText") }}</p>
+                    <div class="info" :class="locale == 'ar' ? 'ar' : ''">
+                        2023/3/23 (120)
+                    </div>
+                    <div class="go-to-products">
+                        <button type="button" class="btn btn-success">{{ $t("latestNews.button") }}</button>
+                    </div>
+                </div>
+            </div>
+            <div class="news col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
                 <div class="news-image" :class="locale == 'ar' ? 'ar-flow' : ''"> <img src="../assets//news.webp" alt="">
                 </div>
                 <div class="news-text" :class="locale == 'ar' ? 'ar ar-flow' : ''">
@@ -16,10 +30,10 @@
                     </div>
                 </div>
             </div>
-            <div class="news col-lg-4 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
-                <div class="news-image" :class="locale == 'ar' ? 'ar-flow' : ''"> <img src="../assets//news.webp" alt="">
+            <div class="news col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+                <div class="news-image" :class="locale == 'ar' ? 'ar-flow' : ''"> <img src="../assets//news2.webp" alt="">
                 </div>
-                <div class="news-text" :class="locale == 'ar' ? 'ar ar-flow' : ''">
+                <div class="news-text" :class="locale == 'ar' ? 'ar-flow ar' : ''">
                     <h5>{{ $t("latestNews.newsTitle") }}</h5>
                     <p>{{ $t("latestNews.newsText") }}</p>
                     <div class="info" :class="locale == 'ar' ? 'ar' : ''">
@@ -30,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="news col-lg-4 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+            <div class="news col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
                 <div class="news-image" :class="locale == 'ar' ? 'ar-flow' : ''"> <img src="../assets//news.webp" alt="">
                 </div>
                 <div class="news-text" :class="locale == 'ar' ? 'ar-flow ar' : ''">
@@ -66,8 +80,8 @@ onMounted(() => {
 @import "../styles/style.scss";
 
 .container {
-    margin-top: 160px;
-    margin-bottom: 80px;
+    margin-top: 80px;
+    margin-bottom: 40px;
 
     h4 {
         color: $baseColor;
@@ -78,9 +92,19 @@ onMounted(() => {
     }
 
     .news {
+        margin-bottom: 40px;
+
         .news-image {
             img {
                 width: 300px;
+                height: 200px;
+                border: 5px solid $secondryColor;
+                border-radius: 16px;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
 

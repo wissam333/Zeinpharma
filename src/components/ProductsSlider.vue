@@ -26,23 +26,23 @@
                 <div class="product-text">{{ $t("products.product5") }}</div>
             </swiper-slide>
             <swiper-slide class="item">
-                <div class="product-image"> <img src="../assets/products/product6.jpg" alt=""> </div>
+                <div class="product-image"> <img src="../assets/products/product1.jpg" alt=""> </div>
                 <div class="product-text">{{ $t("products.product6") }}</div>
             </swiper-slide>
             <swiper-slide class="item">
-                <div class="product-image"> <img src="../assets/products/product7.jpg" alt=""> </div>
+                <div class="product-image"> <img src="../assets/products/product2.jpg" alt=""> </div>
                 <div class="product-text">{{ $t("products.product7") }}</div>
             </swiper-slide>
             <swiper-slide class="item">
-                <div class="product-image"> <img src="../assets/products/product8.jpg" alt=""> </div>
+                <div class="product-image"> <img src="../assets/products/product3.jpg" alt=""> </div>
                 <div class="product-text">{{ $t("products.product8") }}</div>
             </swiper-slide>
             <swiper-slide class="item">
-                <div class="product-image"> <img src="../assets/products/product9.jpg" alt=""> </div>
+                <div class="product-image"> <img src="../assets/products/product4.jpg" alt=""> </div>
                 <div class="product-text">{{ $t("products.product9") }}</div>
             </swiper-slide>
             <swiper-slide class="item">
-                <div class="product-image"> <img src="../assets/products/product10.jpg" alt=""> </div>
+                <div class="product-image"> <img src="../assets/products/product5.jpg" alt=""> </div>
                 <div class="product-text">{{ $t("products.product10") }}</div>
             </swiper-slide>
         </swiper>
@@ -124,12 +124,12 @@ onMounted(() => {
                 display: flex;
                 align-items: center;
                 width: 250px;
-                height: 250px;
+                height: 225px;
                 margin: auto;
 
                 @media (max-width: 768px) {
                     width: 150px;
-                    height: 150px;
+                    height: 125px;
                 }
 
                 img {

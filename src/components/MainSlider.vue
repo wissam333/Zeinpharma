@@ -22,7 +22,7 @@
             <div class="overlay"></div>
             <div class="img-contain container">
                 <div class="left-content" :class="locale == 'ar' ? 'ar' : ''">
-                    <h4 data-aos="zoom-out" data-aos-duration="1000">{{
+                    <h4>{{
                         $t("mainSlider.mainText") }}</h4>
                     <p></p>
                 </div>
@@ -37,7 +37,7 @@
             <div class="overlay"></div>
             <div class="img-contain container">
                 <div class="left-content" :class="locale == 'ar' ? 'ar' : ''">
-                    <h4 data-aos="zoom-out" data-aos-duration="1000">{{
+                    <h4>{{
                         $t("mainSlider.mainText") }}</h4>
                     <p></p>
                 </div>
@@ -52,7 +52,7 @@
             <div class="overlay"></div>
             <div class="img-contain container">
                 <div class="left-content" :class="locale == 'ar' ? 'ar' : ''">
-                    <h4 data-aos="zoom-out" data-aos-duration="1000">{{
+                    <h4>{{
                         $t("mainSlider.mainText") }}</h4>
                     <p></p>
                 </div>
@@ -178,7 +178,7 @@ export default {
             }
 
             @media (max-width: 479px) {
-                font-size: 15px;
+                font-size: 20px;
             }
         }
 

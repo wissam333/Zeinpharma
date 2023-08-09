@@ -162,7 +162,6 @@ onMounted(() => {
                 a {
                     text-decoration: none;
                     color: #000;
-                    font-weight: 600;
                     font-size: 17px;
 
                     &:hover,

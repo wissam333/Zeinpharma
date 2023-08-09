@@ -11,7 +11,4 @@ import AppNavbar from './components/golbal/AppNavbar.vue';
 </template>
 
 <style lang="scss" scoped>
-.app {
-  height: 10000px;
-}
 </style>

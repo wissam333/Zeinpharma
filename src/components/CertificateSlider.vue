@@ -58,13 +58,16 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    font-size: 15px;
 
     @media (max-width: 1200px) {
         width: 125px;
+        font-size: 13px;
     }
 
     @media (max-width: 991px) {
         width: 100px;
+        font-size: 13px;
     }
 
     @media (max-width: 768px) {
@@ -79,7 +82,9 @@ export default {
 
     p {
         color: #fff;
-        padding: 8px;
+        padding: 5px;
+        line-height: 10px;
+        font-weight: bold;
     }
 
     img {

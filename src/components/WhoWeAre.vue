@@ -4,13 +4,16 @@
             <div class="content-image col-lg-6 col-sm-12" data-aos="fade-right" data-aos-duration="1000">
                 <img src="../assets/who-we-are.webp" alt="">
             </div>
-            <div :class="locale == 'ar' ? 'ar' : ''" class="content-text col-lg-6 col-sm-12" data-aos="fade-left"
-                data-aos-duration="1000">
-                <h4>{{ $t("generalInfo.whoWeAre") }}</h4>
-                <p>{{ $t("generalInfo.paragraph") }}</p>
+            <div :class="locale == 'ar' ? 'ar' : ''" class="content-text col-lg-6 col-sm-12">
+                <section data-aos="fade-left" data-aos-duration="1000">
+                    <h4>{{ $t("generalInfo.whoWeAre") }}</h4>
+                    <p>{{ $t("generalInfo.paragraph") }}</p>
+                </section>
                 <br>
-                <h4>{{ $t("generalInfo.whatWeDo") }}</h4>
-                <p>{{ $t("generalInfo.paragraph") }}</p>
+                <section data-aos="fade-left" data-aos-duration="1000">
+                    <h4>{{ $t("generalInfo.whatWeDo") }}</h4>
+                    <p>{{ $t("generalInfo.paragraph") }}</p>
+                </section>
             </div>
         </div>
     </div>
@@ -49,7 +52,7 @@ onMounted(() => {
 
             img {
                 width: 450px;
-                border: 5px solid $baseColor;
+                border: 5px solid #283790;
                 border-radius: 8px;
 
                 @media (max-width: 479px) {
@@ -63,6 +66,9 @@ onMounted(() => {
             display: flex;
             justify-content: center;
             flex-direction: column;
+            //for AOS 
+            overflow-x: hidden;
+            position: relative;
 
             h4 {
                 font-size: 25px;

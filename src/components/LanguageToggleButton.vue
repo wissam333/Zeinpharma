@@ -44,7 +44,7 @@ let { locale } = useI18n()
 }
 
 input.check-toggle-round-flat:checked~.off {
-    color: $baseColor;
+    color: $secondryColor;
 }
 
 input.check-toggle-round-flat:checked~.on {
@@ -54,7 +54,7 @@ input.check-toggle-round-flat:checked~.on {
 .switch>span.on {
     left: 0;
     padding-left: 2px;
-    color: $baseColor;
+    color: $secondryColor;
 }
 
 .switch>span.off {
@@ -84,7 +84,7 @@ input.check-toggle-round-flat+label {
     padding: 2px;
     width: 97px;
     height: 35px;
-    background-color: $baseColor;
+    background-color: $secondryColor;
     -webkit-border-radius: 60px;
     -moz-border-radius: 60px;
     -ms-border-radius: 60px;
@@ -104,7 +104,7 @@ input.check-toggle-round-flat+label:before {
     left: 2px;
     bottom: 2px;
     right: 2px;
-    background-color: $baseColor;
+    background-color: $secondryColor;
     border-radius: 60px;
 }
 

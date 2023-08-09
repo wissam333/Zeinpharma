@@ -1,4 +1,5 @@
 $baseColor: #2bb673;
+$secondryColor: #283790;
 
 .ar {
   text-align: right !important;
@@ -6,6 +7,9 @@ $baseColor: #2bb673;
 .ar-reverse {
   flex-direction: row-reverse !important;
 }
-.ar-flow{
-    float: right !important;
+.ar-flow {
+  float: right !important;
+}
+h1,h2,h3,h4,h5,p,div,button{
+  font-family: Arial, Helvetica, sans-serif;
 }
