@@ -12,16 +12,16 @@
                 <p>English is a compulsory language in many educational systems around the world. Learning English nowadays
                 </p>
             </div>
-            <div class="contact col-sm-8" data-aos="fade-up" data-aos-duration="1000">
+            <div class="contact col-sm-8">
                 <div class="row">
-                    <div class="contactCol adress col-lg-3 col-sm-6">
+                    <div class="contactCol adress col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="1000">
                         <div class="contact-title">
                             <i class="bi bi-house-fill"></i>
                             Adress
                         </div>
                         <p>Syria - Tartus - Safita</p>
                     </div>
-                    <div class="contactCol phone col-lg-3 col-sm-6">
+                    <div class="contactCol phone col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="1000">
                         <div class="contact-title">
                             <i class="bi bi-telephone-fill"></i>
                             Phone
@@ -32,14 +32,14 @@
                             +963 938 293929
                         </p>
                     </div>
-                    <div class="contactCol email col-lg-3 col-sm-6">
+                    <div class="contactCol email col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="1000">
                         <div class="contact-title">
                             <i class="bi bi-envelope-at-fill"></i>
                             E-mail
                         </div>
                         <p>info@zein-pharma.com</p>
                     </div>
-                    <div class="contactCol fax col-lg-3 col-sm-6">
+                    <div class="contactCol fax col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="1000">
                         <div class="contact-title">
                             <i class="bi bi-pass-fill"></i>
                             Fax
@@ -71,6 +71,7 @@ onMounted(() => {
 @import "../../styles/style.scss";
 
 .container {
+    overflow: hidden;
     .logo {
         margin-top: 40px;
 
@@ -131,8 +132,6 @@ onMounted(() => {
                     font-size: 20px;
                 }
             }
-
-            p {}
         }
     }
 }

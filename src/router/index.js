@@ -7,6 +7,7 @@ import JobsView from '../views/JobsView.vue'
 import NewsView from '../views/NewsView.vue'
 import PartnersView from '../views/PartnersView.vue'
 import ProductView from '../views/ProductView.vue'
+import ItemView from '../views/ItemView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -51,9 +52,14 @@ const router = createRouter({
       component: PartnersView
     },
     {
-      path: '/ProductView',
+      path: '/ProductView/:category',
       name: 'ProductView',
       component: ProductView
+    },
+    {
+      path: '/ItemView/:id',
+      name: 'ItemView',
+      component: ItemView
     }
   ]
 })

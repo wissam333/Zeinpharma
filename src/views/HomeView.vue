@@ -15,14 +15,13 @@
 </template>
 
 <script setup>
-import MainSlider from '../components/MainSlider.vue';
-import WhoWeAre from '../components/WhoWeAre.vue';
-import ProductsSlider from '../components/ProductsSlider.vue';
-import LatestNews from "../components/LatestNews.vue"
+import MainSlider from '../components/Home/MainSlider.vue';
+import WhoWeAre from '../components/Home/WhoWeAre.vue';
+import ProductsSlider from '../components/Products/ProductsSlider.vue';
+import LatestNews from "../components/Home/LatestNews.vue"
 import AppFooter from '../components/golbal/AppFooter.vue';
 </script>
 
 <style lang="scss" scoped>
-.logo-background {}
 </style> 
 

@@ -5,7 +5,7 @@
     }" :modules="modules" class="mySwiper">
         <swiper-slide>
             <div class="overlay"></div>
-            <div :class="locale == 'ar' ? 'ar-reverse' : ''" class="img-contain container">
+            <div class="img-contain container" :class="locale == 'ar' ? 'ar-reverse' : ''">
                 <div class="left-content" :class="locale == 'ar' ? 'ar' : ''">
                     <h4 data-aos="zoom-out" data-aos-duration="1000">{{
                         $t("mainSlider.mainText") }}</h4>
@@ -20,7 +20,7 @@
         </swiper-slide>
         <swiper-slide>
             <div class="overlay"></div>
-            <div class="img-contain container">
+            <div class="img-contain container" :class="locale == 'ar' ? 'ar-reverse' : ''">
                 <div class="left-content" :class="locale == 'ar' ? 'ar' : ''">
                     <h4>{{
                         $t("mainSlider.mainText") }}</h4>
@@ -35,7 +35,7 @@
         </swiper-slide>
         <swiper-slide>
             <div class="overlay"></div>
-            <div class="img-contain container">
+            <div class="img-contain container" :class="locale == 'ar' ? 'ar-reverse' : ''">
                 <div class="left-content" :class="locale == 'ar' ? 'ar' : ''">
                     <h4>{{
                         $t("mainSlider.mainText") }}</h4>
@@ -50,7 +50,7 @@
         </swiper-slide>
         <swiper-slide>
             <div class="overlay"></div>
-            <div class="img-contain container">
+            <div class="img-contain container" :class="locale == 'ar' ? 'ar-reverse' : ''">
                 <div class="left-content" :class="locale == 'ar' ? 'ar' : ''">
                     <h4>{{
                         $t("mainSlider.mainText") }}</h4>
@@ -91,7 +91,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/style.scss";
+@import "../../styles/style.scss";
 
 .swiper-slide {
     position: relative;
@@ -118,19 +118,19 @@ export default {
     }
 
     &:nth-child(1) {
-        background-image: url("../assets/main2.webp");
+        background-image: url("../../assets/main2.webp");
     }
 
     &:nth-child(2) {
-        background-image: url("../assets/main6.webp");
+        background-image: url("../../assets/main6.webp");
     }
 
     &:nth-child(3) {
-        background-image: url("../assets/main3.webp");
+        background-image: url("../../assets/main3.webp");
     }
 
     &:nth-child(4) {
-        background-image: url("../assets/main5.webp");
+        background-image: url("../../assets/main5.webp");
     }
 
     .overlay {
@@ -144,7 +144,7 @@ export default {
         height: 100%;
         background-color: black;
         opacity: 0.4;
-        z-index: -1;
+        z-index: 0;
 
     }
 }
@@ -158,6 +158,7 @@ export default {
 
     .left-content {
         width: 50%;
+        z-index: 1;
 
         h4 {
             color: #fff;

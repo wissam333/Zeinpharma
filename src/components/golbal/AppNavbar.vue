@@ -5,13 +5,16 @@
                 <a class="navbar-brand" href="#">
                     <img src="../../assets/logo.png" alt="Zeinpharma">
                 </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
                         <li class="nav-item">
                             <RouterLink to="/" @click="activePage = 'Home'"
                                 :class="activePage == 'Home' ? 'activePage' : ''">
@@ -22,7 +25,7 @@
                             </RouterLink>
                         </li>
                         <li class="nav-item">
-                            <RouterLink to="/ProductView" @click="activePage = 'Product'"
+                            <RouterLink to="/ProductView/All" @click="activePage = 'Product'"
                                 :class="activePage == 'Product' ? 'activePage' : ''">
                                 <div v-if="mobile" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                                     {{ $t("nav.Product") }}</div>
@@ -30,17 +33,23 @@
                             </RouterLink>
                         </li>
                         <li class="nav-item dropdown">
-                            <RouterLink to="NewsView" @click="activePage = 'News'"
-                                :class="activePage == 'News' ? 'activePage' : ''" class="nav-link dropdown-toggle" href="#"
-                                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a to="NewsView" @click="activePage = 'News'" :class="activePage == 'News' ? 'activePage' : ''"
+                                class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <span v-if="mobile" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">{{
                                     $t("nav.News") }}</span>
                                 <span v-else>{{ $t("nav.News") }}</span>
-                            </RouterLink>
+                            </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Latest News</a></li>
-                                <li><a class="dropdown-item" href="#">Interviews</a></li>
-                                <li><a class="dropdown-item" href="#">Events</a></li>
+                                <li>
+                                    <RouterLink to="/NewsView" class="dropdown-item">Latest News</RouterLink>
+                                </li>
+                                <li>
+                                    <RouterLink to="/NewsView" class="dropdown-item">Interviews</RouterLink>
+                                </li>
+                                <li>
+                                    <RouterLink to="/NewsView" class="dropdown-item">Events</RouterLink>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -96,9 +105,12 @@
 import { RouterLink } from 'vue-router';
 import { ref, onMounted } from "vue"
 import LanguageToggleButton from '../LanguageToggleButton.vue';
-//active page base color
-let activePage = ref("Home")
-
+// store
+import { productsFilter } from "../../stores/counter";
+import { storeToRefs } from "pinia";
+//store fetch
+let filter = productsFilter();
+let { activePage } = storeToRefs(filter)
 //solving navbar collapse problem 
 let mobile = ref(false)
 onMounted(() => {
@@ -123,9 +135,12 @@ onMounted(() => {
         border-bottom: 1px solid #eee;
         box-shadow: 0px -8px 11px 0px;
         padding: 0;
-        overflow-y: auto;
-        overflow-x: hidden;
         z-index: 10000;
+
+        @media (max-width: 991px) {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
 
         .navbar-brand {
             width: 150px;

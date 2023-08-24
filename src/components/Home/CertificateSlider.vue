@@ -9,19 +9,19 @@
         }" :modules="modules" class="mySwiper">
         <swiper-slide>
             <div class="certificate-content">
-                <img src="../assets/ISO.webp" alt="">
+                <img src="../../assets/ISO.webp" alt="">
                 <p>ISO 14001:2015</p>
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="certificate-content">
-                <img src="../assets/ISO2.webp" alt="">
+                <img src="../../assets/ISO2.webp" alt="">
                 <p>ISO 9001:2015</p>
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="certificate-content">
-                <img src="../assets//med.webp" alt="">
+                <img src="../../assets//med.webp" alt="">
                 <p>Excellent Medicine</p>
             </div>
         </swiper-slide>

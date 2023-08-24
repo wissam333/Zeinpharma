@@ -2,7 +2,7 @@
     <div class="container">
         <div class="container-content row" :class="locale == 'ar' ? 'ar-reverse' : ''">
             <div class="content-image col-lg-6 col-sm-12" data-aos="fade-right" data-aos-duration="1000">
-                <img src="../assets/who-we-are.webp" alt="">
+                <img src="../../assets/who-we-are.webp" alt="">
             </div>
             <div :class="locale == 'ar' ? 'ar' : ''" class="content-text col-lg-6 col-sm-12">
                 <section data-aos="fade-left" data-aos-duration="1000">
@@ -34,7 +34,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/style.scss";
+@import "../../styles/style.scss";
 
 .container {
     margin-top: 80px;
@@ -52,7 +52,7 @@ onMounted(() => {
 
             img {
                 width: 450px;
-                border: 5px solid #283790;
+                border: 5px solid $secondryColor;
                 border-radius: 8px;
 
                 @media (max-width: 479px) {

@@ -11,4 +11,7 @@ import AppNavbar from './components/golbal/AppNavbar.vue';
 </template>
 
 <style lang="scss" scoped>
+.app {
+  overflow-x: hidden;
+}
 </style>
